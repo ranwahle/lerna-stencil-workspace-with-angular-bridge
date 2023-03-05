@@ -41,4 +41,4 @@ import { JllComponentLibraryModule } from 'jll-component-library';
 
 ## Watching changes
 1. On packages/jll-stencil-library run ``npm run build:watch`` 
-   Alternatively tyou may run ``stencil build --watch`` just don't run it with --dev because if you want changes to be seen at your consuming app.
+   Alternatively you may run ``stencil build --watch`` just don't run it with --dev because if you want changes to be seen at your consuming app.
