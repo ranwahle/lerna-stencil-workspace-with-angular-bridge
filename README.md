@@ -32,13 +32,13 @@ import { JllComponentLibraryModule } from 'jll-component-library';
   ],
 ```
 
-11. Consume ``my-component`` on one of your components
+10. Consume ``my-component`` on one of your components
 ```html
 <my-component first="'first'"></my-component>
 ```
 
-12. Run the consuming app mentioned in 6. and 8. 
+11. Run the consuming app mentioned in 6. and 8. 
 
-## Watching
+## Watching changes
 1. On packages/jll-stencil-library run ``npm run build:watch`` 
    Alternatively tyou may run ``stencil build --watch`` just don't run it with --dev because if you want changes to be seen at your consuming app.
