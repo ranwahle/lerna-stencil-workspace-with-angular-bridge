@@ -14,6 +14,31 @@ This is an example of how to develop a Stencil based component library and use i
 4. On packages/angular-workspace run ``npm run build:lib``
 5. Publish or pack the angular bridge by going to ``dist/jll-component-library`` and running `npm pack` or running `npm publish`
 6. On an angular application, the consuming app, outside this repo, consume the bridge app by running `npm install <path to the bridge app>`
+    * You may encounter an ``E404`` error stating that ``jll-stencil-library`` is not found, it is OK, you may continue. 
 7. On ``packages/jll-stencil-library`` run `npm link`
 8. On the consuming app on 6. run `npm link jll-stencil-library`
-9. Run the consuming app mentioned in 6. and 8. 
+9. On your main module, import ``JllComponentLibraryModule`` 
+
+```typescript
+import { JllComponentLibraryModule } from 'jll-component-library';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    JllComponentLibraryModule,
+  ],
+```
+
+11. Consume ``my-component`` on one of your components
+```html
+<my-component first="'first'"></my-component>
+```
+
+12. Run the consuming app mentioned in 6. and 8. 
+
+## Watching
+1. On packages/jll-stencil-library run ``npm run build:watch`` 
+   Alternatively tyou may run ``stencil build --watch`` just don't run it with --dev because if you want changes to be seen at your consuming app.

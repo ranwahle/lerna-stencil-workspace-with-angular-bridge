@@ -27,6 +27,6 @@ export class MyComponent {
   }
 
   render() {
-    return <div>Hello, Eyal JLL 12 {this.getText()}</div>;
+    return <div>Goodby, and thanks JLL 12 {this.getText()}</div>;
   }
 }
